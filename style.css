@@ -26,3 +26,22 @@ body {
     color: #fff2d8;
   }
   
+
+/* Media query untuk layar yang lebarnya kurang dari atau sama dengan 600px */
+@media (max-width: 600px) {
+    /* Mengatur lebar tombol menjadi 100% dari lebar kontainer */
+    button {
+      width: 100%;
+    }
+  
+    /* Mengatur margin bawah tombol menjadi 10px */
+    button {
+      margin-bottom: 10px;
+    }
+  
+    /* Menghilangkan margin kanan tombol */
+    button {
+      margin-right: 0;
+    }
+  }
+  

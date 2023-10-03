@@ -53,14 +53,17 @@
     });
 
     reset.addEventListener("click", function() {
-      // Menghapus data dari local storage
-      localStorage.removeItem("boba");
-      localStorage.removeItem("oreo");
-      // Mengatur angka menjadi nol
-      bobaCount.textContent = 0;
-      oreoCount.textContent = 0;
-      // Menampilkan alert
-      alert("Data telah direset!");
+      // Menampilkan alert dan menanyakan konfirmasi pengguna
+      var confirm = window.confirm("Apakah Anda yakin ingin mereset data?");
+      // Jika pengguna menekan OK, maka data akan direset
+      if (confirm) {
+        // Menghapus data dari local storage
+        localStorage.removeItem("boba");
+        localStorage.removeItem("oreo");
+        // Mengatur angka menjadi nol
+        bobaCount.textContent = 0;
+        oreoCount.textContent = 0;
+      }
     });
   </script>
 </body>
