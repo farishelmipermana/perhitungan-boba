@@ -1,0 +1,28 @@
+/* Mengatur warna latar belakang halaman menjadi #fff2d8 */
+body {
+    background-color: #fff2d8;
+  }
+  
+  /* Mengatur warna teks menjadi #113946 */
+  h1, span {
+    color: #113946;
+  }
+  
+  /* Mengatur warna latar belakang dan teks tombol boba menjadi #ead7bb dan #113946 */
+  #boba {
+    background-color: #ead7bb;
+    color: #113946;
+  }
+  
+  /* Mengatur warna latar belakang dan teks tombol oreo menjadi #bca37f dan #113946 */
+  #oreo {
+    background-color: #bca37f;
+    color: #113946;
+  }
+  
+  /* Mengatur warna latar belakang dan teks tombol reset menjadi #113946 dan #fff2d8 */
+  #reset {
+    background-color: #113946;
+    color: #fff2d8;
+  }
+  

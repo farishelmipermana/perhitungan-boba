@@ -1,0 +1,67 @@
+<html>
+<head>
+  <style>
+    button {
+      font-size: 20px;
+      margin: 10px;
+    }
+    span {
+      font-size: 20px;
+      margin: 10px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Aplikasi Sederhana Count Perhitungan</h1>
+  <button id="boba">Boba</button>
+  <span id="boba-count">0</span>
+  <br>
+  <button id="oreo">Boba dengan Oreo</button>
+  <span id="oreo-count">0</span>
+  <br>
+  <button id="reset">Reset</button>
+  <script>
+    // Mendapatkan elemen-elemen yang dibutuhkan
+    var boba = document.getElementById("boba");
+    var oreo = document.getElementById("oreo");
+    var reset = document.getElementById("reset");
+    var bobaCount = document.getElementById("boba-count");
+    var oreoCount = document.getElementById("oreo-count");
+
+    // Mengambil data dari local storage jika ada
+    if (localStorage.getItem("boba") !== null) {
+      bobaCount.textContent = localStorage.getItem("boba");
+    }
+    if (localStorage.getItem("oreo") !== null) {
+      oreoCount.textContent = localStorage.getItem("oreo");
+    }
+
+    // Menambahkan event listener untuk setiap tombol
+    boba.addEventListener("click", function() {
+      // Menambahkan satu ke angka di sebelah tombol boba
+      bobaCount.textContent = parseInt(bobaCount.textContent) + 1;
+      // Menyimpan data ke local storage
+      localStorage.setItem("boba", bobaCount.textContent);
+    });
+
+    oreo.addEventListener("click", function() {
+      // Menambahkan satu ke angka di sebelah tombol oreo
+      oreoCount.textContent = parseInt(oreoCount.textContent) + 1;
+      // Menyimpan data ke local storage
+      localStorage.setItem("oreo", oreoCount.textContent);
+    });
+
+    reset.addEventListener("click", function() {
+      // Menghapus data dari local storage
+      localStorage.removeItem("boba");
+      localStorage.removeItem("oreo");
+      // Mengatur angka menjadi nol
+      bobaCount.textContent = 0;
+      oreoCount.textContent = 0;
+      // Menampilkan alert
+      alert("Data telah direset!");
+    });
+  </script>
+</body>
+</html>
